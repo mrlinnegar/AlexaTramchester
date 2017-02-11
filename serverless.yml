@@ -1,0 +1,23 @@
+
+service: Tramchester
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+package:
+  include:
+    - index.js
+    - node_modules/**
+    - lib/**
+  exclude:
+    - package.json
+    - speechAssets/**
+    - spec/**
+
+
+functions:
+  GetTrams:
+    handler: index.handler
+    events: 
+      - alexaSkill

@@ -1,0 +1,20 @@
+{
+  "name": "tramchester",
+  "version": "0.0.1",
+  "description": "alexa interface over tramchester api",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "moment": "^2.17.1",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "deploy": "serverless deploy"
+  },
+  "author": "",
+  "license": "ISC"
+}

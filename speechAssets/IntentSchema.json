@@ -1,0 +1,40 @@
+{
+  "intents": [
+    {
+      "intent": "NextTramToIntent",
+      "slots": [{
+        "name": "Station",
+        "type": "LIST_OF_STATIONS"
+      }]
+    },
+    {
+      "intent": "TramRouteIntent",
+      "slots": [{
+        "name": "FromStation",
+        "type": "LIST_OF_STATIONS"
+      },
+      {
+        "name": "ToStation",
+        "type": "LIST_OF_STATIONS"
+      }]
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    },
+    {
+      "intent": "ListStationsIntent"
+    },
+    {
+      "intent": "NextTramIntent"
+    },
+    {
+      "intent": "PreviousTramIntent"
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+NextTramToIntent get next tram to {Station}
+NextTramToIntent the next tram to {Station}
+NextTramToIntent for the next tram to {Station}
+NextTramToIntent I want to go to {Station}
+
+TramRouteIntent for the next tram from {ToStation} to {FromStation}
+TramRouteIntent what is the next tram from {ToStation} to {FromStation}
+TramRouteIntent what's the next tram from {ToStation} to {FromStation}
+TramRouteIntent get the next tram from {ToStation} to {FromStation}
+
+ListStationsIntent list all stations
+
+NextTramIntent next
+NextTramIntent next tram
+NextTramIntent later
+
+PreviousTramIntent previous
+PreviousTramIntent previous tram
+PreviousTramIntent earlier
