@@ -16,6 +16,9 @@ TramRouteIntent get the next tram from {FromStation} to {ToStation}
 TramRouteIntent what's the next tram between {FromStation} and {ToStation}
 TramRouteIntent what is the next tram between {FromStation} and {ToStation}
 
+TramRouteIntent I want to go from {FromStation} to {ToStation}
+TramRouteIntent I would like to go from {FromStation} to {ToStation}
+
 
 ListStationsIntent list all stations
 

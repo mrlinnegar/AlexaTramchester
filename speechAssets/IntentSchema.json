@@ -19,7 +19,18 @@
       }]
     },
     {
-      "intent": "AMAZON.HelpIntent"
+      "intent": "TramRouteTimeIntent",
+      "slots": [
+        { "name":"FromStation",
+          "type": "LIST_OF_STATIONS"
+        },
+        { "name":"ToStation",
+          "type": "LIST_OF_STATIONS"
+        },
+        { "name":"Departure",
+          "type": "AMAZON.TIME"
+        },
+      ]
     },
     {
       "intent": "ListStationsIntent"
@@ -29,6 +40,9 @@
     },
     {
       "intent": "PreviousTramIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
     },
     {
       "intent": "AMAZON.StopIntent"
