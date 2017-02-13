@@ -14,7 +14,7 @@ describe("ResponseFormatter", function() {
 
   it("should format the service to Alexa response", function() {
   	var response = ResponseFormatter.format(mockService);
-    expect(response).toEqual("The next tram from Test Depature to Test Destination is at 12:34. Direct. You should arrive at 12:35.");  
+    expect(response).toEqual("There is a tram from Test Depature to Test Destination at 12:34. Direct. You should arrive at 12:35.");  
   });
 
 });
