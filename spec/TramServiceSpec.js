@@ -14,8 +14,11 @@ describe("TramService", function(){
 		momentProto.format.withArgs("YYYY-MM-DD").returns("2000-01-01");
 		momentProto.format.withArgs("HH:mm:ss").returns("12:00");
 
-		var service = new TramService("mockStation", "mockStation");
-		expect(service.getURL()).toEqual("https://www.tramchester.com/api/journey?departureDate=2000-01-01&departureTime=12:00&end=mockStation&start=mockStation");
+		var service = new TramService()
+							.from("mockFromStation")
+							.to("mockToStation");
+
+		expect(service.getURL()).toEqual("https://www.tramchester.com/api/journey?departureDate=2000-01-01&departureTime=12:00&end=mockToStation&start=mockFromStation");
 	
 		sandbox.restore();
 	});
@@ -25,8 +28,11 @@ describe("TramService", function(){
 		sandbox.stub(momentProto,'format');
 		momentProto.format.withArgs("YYYY-MM-DD").returns("2000-01-01");
 
-		var service = new TramService("mockStation", "mockStation").departingAt("12:30");
-		expect(service.getURL()).toEqual("https://www.tramchester.com/api/journey?departureDate=2000-01-01&departureTime=12:30&end=mockStation&start=mockStation");
+		var service = new TramService()
+							.from("mockFromStation")
+							.to("mockToStation")
+							.departingAt("12:30");
+		expect(service.getURL()).toEqual("https://www.tramchester.com/api/journey?departureDate=2000-01-01&departureTime=12:30&end=mockToStation&start=mockFromStation");
 	
 		sandbox.restore();
 
@@ -34,10 +40,13 @@ describe("TramService", function(){
 
 	it("Should use the supplied date and time", function(){
 		
-		var service = new TramService("mockStation", "mockstation")
+		var service = new TramService()
+							.from("mockFromStation")
+							.to("mockToStation")
 							.departingOn("2016-07-01")
 							.departingAt("12:30");
-		expect(service.getURL()).toEqual("https://www.tramchester.com/api/journey?departureDate=2016-07-01&departureTime=12:30&end=mockstation&start=mockStation");
+
+		expect(service.getURL()).toEqual("https://www.tramchester.com/api/journey?departureDate=2016-07-01&departureTime=12:30&end=mockToStation&start=mockFromStation");
 
 	});
 });
