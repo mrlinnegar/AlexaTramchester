@@ -1,46 +1,73 @@
 {
   "intents": [
     {
-      "intent": "NextTramToIntent",
+      "intent": "TramToIntent",
       "slots": [{
         "name": "Station",
         "type": "LIST_OF_STATIONS"
+      },
+      { "name":"DepartureTime",
+        "type": "AMAZON.TIME"
+      },
+      { "name": "DepartureDate",
+        "type": "AMAZON.DATE"
+      }]
+    },
+    {
+      "intent": "TramFromIntent",
+      "slots": [{
+        "name": "Station",
+        "type": "LIST_OF_STATIONS"
+      },
+      { "name":"DepartureTime",
+        "type": "AMAZON.TIME"
+      },
+      { "name": "DepartureDate",
+        "type": "AMAZON.DATE"
       }]
     },
     {
       "intent": "TramRouteIntent",
-      "slots": [{
-        "name": "FromStation",
-        "type": "LIST_OF_STATIONS"
-      },
-      {
-        "name": "ToStation",
-        "type": "LIST_OF_STATIONS"
-      }]
-    },
-    {
-      "intent": "TramRouteTimeIntent",
       "slots": [
-        { "name":"FromStation",
+        {
+          "name": "FromStation",
           "type": "LIST_OF_STATIONS"
         },
-        { "name":"ToStation",
+        {
+          "name": "ToStation",
           "type": "LIST_OF_STATIONS"
         },
-        { "name":"Departure",
-          "type": "AMAZON.TIME"
+        { "name":"DepartureTime",
+            "type": "AMAZON.TIME"
+        },
+        { "name":"DepartureDate",
+          "type": "AMAZON.DATE"
         }
       ]
-    },
+    },  
     {
       "intent": "ListStationsIntent"
     },
     {
-      "intent": "NextTramIntent"
+      "intent": "ToHomeStationIndent",
+      "slots":[
+        { "name": "FromStation",
+          "type": "LIST_OF_STATIONS"
+        }
+      ]
     },
     {
-      "intent": "PreviousTramIntent"
+      "intent": "SaveHomeStationIntent",
+      "slots": [
+        { "name": "Station",
+          "type": "LIST_OF_STATIONS"
+        }
+      ]
     },
+    {
+      "intent": "RetrieveHomeStationIntent"
+    },
+    
     {
       "intent": "AMAZON.HelpIntent"
     },

@@ -1,12 +1,17 @@
-NextTramToIntent get the next tram to {Station}
+TramToIntent get the next tram to {Station}
 
-NextTramToIntent what's the next tram to {Station}
-NextTramToIntent what is the next tram to {Station}
+TramToIntent what's the next tram to {Station}
+TramToIntent what is the next tram to {Station}
+TramToIntent the next tram to {Station}
+TramToIntent for the next tram to {Station}
+TramToIntent I want to go to {Station}
+TramToIntent I would like to go to {Station} at {DepartureTime}
+TramToIntent I would like to go to {Station} {DepartureTime} {DepartureDate}
 
-NextTramToIntent the next tram to {Station}
-NextTramToIntent for the next tram to {Station}
-NextTramToIntent I want to go to {Station}
-NextTramToIntent I would like to go to {Station}
+TramFromIntent the next tram back from {Station}
+TramFromIntent for the next tram back from {Station}
+TramFromIntent I want to go from {Station}
+TramFromIntent I would like to return from {Station}
 
 
 TramRouteIntent for the next tram from {FromStation} to {ToStation}
@@ -15,20 +20,23 @@ TramRouteIntent what's the next tram from {FromStation} to {ToStation}
 TramRouteIntent get the next tram from {FromStation} to {ToStation}
 TramRouteIntent what's the next tram between {FromStation} and {ToStation}
 TramRouteIntent what is the next tram between {FromStation} and {ToStation}
-
 TramRouteIntent I want to go from {FromStation} to {ToStation}
 TramRouteIntent I would like to go from {FromStation} to {ToStation}
 
-TramRouteTimeIntent I would like to go from {FromStation} to {ToStation} at {Departure}
-TramRouteTimeIntent I want to go from {FromStation} to {ToStation} at {Departure}
+TramRouteIntent I would like to go from {FromStation} to {ToStation} at {DepartureTime}
+TramRouteIntent I want to go from {FromStation} to {ToStation} at {DepartureTime}
+TramRouteIntent I want to go from {FromStation} to {ToStation} {DepartureTime}
 
+TramRouteIntent I want to go from {FromStation} to {ToStation} {DepartureTime} {DepartureDate}
+TramRouteIntent I would like to go from {FromStation} to {ToStation} {DepartureTime} {DepartureDate}
+
+
+SaveHomeStationIntent save my home station as {Station}
+SaveHomeStationIntent set my home station to {Station}
+SaveHomeStationIntent save my station as {Station}
+SaveHomeStationIntent set my station to {Station}
+
+RetrieveHomeStationIntent what is my home station
+RetrieveHomeStationIntent what is my station
 
 ListStationsIntent list all stations
-
-NextTramIntent next
-NextTramIntent next tram
-NextTramIntent later
-
-PreviousTramIntent previous
-PreviousTramIntent previous tram
-PreviousTramIntent earlier
